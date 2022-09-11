@@ -20,9 +20,16 @@ const fs = require('fs');
 //         console.log('successfully renamed the file');    
 // })
 
-fs.appendFile('example2.txt','Some data being appended', (err)=>{
+// fs.appendFile('example2.txt','Some data being appended', (err)=>{
+//     if(err)
+//          console.log(err);
+//      else
+//          console.log('successfully appended data to file');    
+// })
+
+fs.unlink('example2.txt',(err)=>{
     if(err)
-         console.log(err);
-     else
-         console.log('successfully appended data to file');    
+          console.log(err);
+      else
+          console.log('successfully deleted the file'); 
 })
